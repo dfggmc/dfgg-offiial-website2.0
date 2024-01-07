@@ -10,3 +10,8 @@
 2. [fullPage.js(网页翻页效果)](https://github.com/alvarotrigo/fullPage.js)
 
 ***感谢以上这两个优秀的第三方库***
+
+## 开源仓库：
+1. [gitee](https://gitee.com/dfggmc/dfgg-offiial-website2.0)
+2. [gitlab](https://gitlab.com/dfggmc/dfgg-offiial-website2.0)
+3. [github(主仓库)](https://github.com/dfggmc/dfgg-offiial-website2.0)
