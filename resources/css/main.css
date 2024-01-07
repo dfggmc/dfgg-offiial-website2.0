@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+    color: #fff;
+    text-shadow: 0 .1875rem .3125rem #1c1f21;
+}
+
+@font-face {
+    font-family: SmileySans;
+    src: url(/resources/font/SmileySans/SmileySans-Oblique.woff2);
+}
+
+body {
+    font-family: 'SmileySans';
+    margin: 0;
+}
+
+#menu li {
+    display: inline-block;
+    margin: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+#menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 40px;
+    z-index: 70;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+header {
+    display: flex;
+    align-items: center;
+    z-index: 99999;
+    position: fixed;
+    padding: 10px;
+    justify-content: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+header a {
+    padding: 10px;
+    margin-right: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+header .logo {
+    height: 2.4rem;
+}
