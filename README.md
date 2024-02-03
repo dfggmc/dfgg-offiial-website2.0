@@ -20,5 +20,12 @@
 3. [github(主仓库)](https://github.com/dfggmc/dfgg-offiial-website2.0)
 
 
-## 安装环境要求：
+## 安装
+1. 环境要求：
 请参考[服务器需求](https://codeigniter.org.cn/user_guide/intro/requirements.html)
+
+2. 如果你的服务器支持命令行
+```ssh
+composer create-project dfggmc/dfgg-offiial-website
+```
+否则下载最新Releases
