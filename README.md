@@ -3,7 +3,7 @@
 1. 完全脱离dgfeng框架
 2. 项目目录全部重构
 3. 使用Codeigniter框架
-4. 全站Pjax
+4. ~~全站Pjax~~
 
 ***
 
