@@ -5,7 +5,7 @@
     "type": "project",
     "homepage": "https://www.dfggmc.top",
     "support": {
-        "forum": "https://bbs.dfggmc.top",
+        "forum": "https://bbs.dfggmc.top"
     },
     "require": {
         "php": "^7.4 || ^8.0",
