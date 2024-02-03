@@ -18,3 +18,7 @@
 1. [gitee](https://gitee.com/dfggmc/dfgg-offiial-website2.0)
 2. [gitlab](https://gitlab.com/dfggmc/dfgg-offiial-website2.0)
 3. [github(主仓库)](https://github.com/dfggmc/dfgg-offiial-website2.0)
+
+
+## 安装环境要求：
+请参考[服务器需求](https://codeigniter.org.cn/user_guide/intro/requirements.html)
