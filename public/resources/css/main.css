@@ -1,0 +1,220 @@
+* {
+    box-sizing: border-box;
+    color: #fff;
+    text-shadow: 0 .1875rem .3125rem #1c1f21;
+}
+
+@font-face {
+    font-family: SmileySans;
+    src: url('/resources/font/SmileySans/SmileySans-Oblique.woff2');
+}
+
+body {
+    font-family: 'SmileySans';
+    margin: 0;
+}
+
+#menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 40px;
+    z-index: 70;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#menu li {
+    display: inline-block;
+    margin: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+#menu i {
+    padding: 3px;
+}
+
+.fixed-menu {
+    position: fixed;
+    top: 40px;
+    left: 0;
+    z-index: 68;
+    /* 比菜单的 z-index 小一些 */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    opacity: 0;
+    /* 默认隐藏 */
+    transform: translateY(-20px);
+    /* 默认向上偏移一些 */
+    animation-duration: var(--animation-duration, 0.5s);
+    animation-fill-mode: forwards;
+}
+
+.fixed-menu.show {
+    /* 显示时的样式 */
+    transform: translateY(0);
+    animation-name: slideIn;
+}
+
+.fixed-menu.notShow {
+    /* 移除时的样式 */
+    transform: translateY(0);
+    animation-name: slideOut;
+}
+
+.fixed-menu li {
+    padding-left: 10px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.fixed-menu li:first-child {
+    border-top: none;
+}
+
+.fixed-menu li a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+
+
+
+footer {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    padding: 10px;
+    justify-content: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+footer a {
+    padding: 10px;
+    margin-right: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+footer .logo {
+    height: 2.4rem;
+}
+
+.aplayer-lrc {
+    top: 45px;
+}
+
+.aplayer-lrc-contents p {
+    text-shadow: none;
+}
+
+.aplayer-lrc-current {
+    text-shadow: none;
+}
+
+#nprogress {
+    pointer-events: none
+}
+
+#nprogress .bar {
+    background: rgb(0, 0, 0);
+    position: fixed;
+    z-index: 1031;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px
+}
+
+#nprogress .peg {
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 100px;
+    height: 100%;
+    box-shadow: 0 0 10px #29d, 0 0 5px #29d;
+    opacity: 1;
+    -webkit-transform: rotate(3deg) translate(0, -4px);
+    -ms-transform: rotate(3deg) translate(0, -4px);
+    transform: rotate(3deg) translate(0, -4px)
+}
+
+#nprogress .spinner {
+    display: block;
+    position: fixed;
+    z-index: 1031;
+    top: 15px;
+    right: 15px
+}
+
+#nprogress .spinner-icon {
+    width: 18px;
+    height: 18px;
+    box-sizing: border-box;
+    border: 2px solid transparent;
+    border-top-color: #29d;
+    border-left-color: #29d;
+    border-radius: 50%;
+    -webkit-animation: nprogress-spinner 400ms linear infinite;
+    animation: nprogress-spinner 400ms linear infinite
+}
+
+.nprogress-custom-parent {
+    overflow: hidden;
+    position: relative
+}
+
+.nprogress-custom-parent #nprogress .bar,
+.nprogress-custom-parent #nprogress .spinner {
+    position: absolute
+}
+
+@-webkit-keyframes nprogress-spinner {
+    0% {
+        -webkit-transform: rotate(0deg)
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg)
+    }
+}
+
+@keyframes nprogress-spinner {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
