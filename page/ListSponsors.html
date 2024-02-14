@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>dfgg Minecraft服务器官网</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/public/resources/css/main.css">
+    <link rel="stylesheet" href="/public/resources/css/index.css">
+    <link rel="stylesheet" href="/public/resources/css/server-photo.css">
+    <link rel="stylesheet" href="/public/resources/css/BetterButton.css">
+    <link href="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/fullPage.js/3.1.2/fullpage.min.css" rel="stylesheet">
+
+    <!--防止出现莫名其妙错误所以js加载顺序禁止调换-->
+    <script src="/public/resources/js/translate.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/deb46094a2.js" crossorigin="anonymous"></script>
+    <script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/nprogress/0.2.0/nprogress.min.js"></script>
+    <script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/fullPage.js/3.1.2/fullpage.min.js"></script>
+    <script src="/public/resources/js/function.js"></script>
+    <meta name="description" content="感谢这些人的赞助，有了你们dfgg服务器更有动力运行下去">
+    <meta name="keywords" content="dfggmc, 我的世界服务器, 我的世界, 1.12.2, 服务器, Java服务器，赞助名单">
+</head>
+
+<body>
+    <script>
+        NProgress.start();
+        window.onload = function () {
+            NProgress.done();
+        }
+    </script>
+    <main>
+        <menu id="menu">
+            <li>
+                <a href="/">
+                    <button class="BetterButton" data-menuanchor="home" class="active">
+                        <i class="fa-solid fa-house"></i>首页
+                    </button>
+                </a>
+            </li>
+            <li>
+                <a href="#list">
+                    <button class="BetterButton" data-menuanchor="list">赞助列表</button>
+                </a>
+            </li>
+
+            <li id="togglePageList">
+                <button class="BetterButton">
+                    <i class="fa-solid fa-list"></i></i>其他链接
+                </button>
+            </li>
+            <li id="toggleLanguage">
+                <button class="BetterButton">
+                    <i class="fa-solid fa-language"></i>语言
+                </button>
+            </li>
+            <li mdui-dialog="{target: '#musicPlayerSettings'}">
+                <button class="BetterButton">
+                    <i class="fa-solid fa-music"></i>音乐播放器设置
+                </button>
+            </li>
+        </menu>
+
+        <div id="fullpage">
+
+            <div class="section" style="text-align: center;">
+                <div class="animate__animated animate__backInDown">
+                    <h1>dfgg Minecraft服务器官网 | 赞助名单</h1>
+                    <h2>感谢这些人的赞助，有了你们dfgg服务器更有动力运行下去</h2>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section2-element" style="margin: 80px;">
+                    <h3>奕晨</h3>
+                    <ul>
+                        <li>在服务器商店 里 赞助了0.01元</li>
+                    </ul>
+
+                    <h3>你鳝丝大跌</h3>
+                    <ul>
+                        <li>送了 peg195 一个Minecraft正版账号</li>
+                    </ul>
+
+                    <h3>小枫_QWQ</h3>
+                    <ul>
+                        <li>赞助了域名和服务器</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <script>
+        $('#fullpage').fullpage({
+            anchors: ['home', 'list'],
+            sectionsColor: ['#03A9F4', '#4BBFC3'],
+            fitToSection: true,
+            loopTop: true,
+            loopBottom: true,
+            menu: '#menu',
+        });
+    </script>
+    <div id="footer"></div>
+    <script>
+        $("#footer").load('/public/common/footer.html');
+    </script>
+</body>
+
+</html>

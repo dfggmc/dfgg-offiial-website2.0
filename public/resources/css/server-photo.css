@@ -1,0 +1,22 @@
+/*服务器截图*/
+
+.server-photo-slide1 {
+    background-image: url('https://imag.xcccx.top/uploads/2024/02/02/65bcf86397c1f.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.server-photo-slide2 {
+    background-image: url('https://imag.xcccx.top/uploads/2024/02/02/65bcf8631fa23.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.server-photo-slide3 {
+    background-image: url('https://imag.xcccx.top/uploads/2024/02/03/65bda4d2cb048.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
