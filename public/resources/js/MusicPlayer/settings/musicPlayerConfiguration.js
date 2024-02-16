@@ -119,7 +119,7 @@ function musicPlayerConfiguration(method, key, value) {
                 enable: true,
                 autoplay: true,
                 musicServer: "netease",
-                playlistId: 2939725092,
+                playlistId: 2326293626,
             };
         }
     }

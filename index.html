@@ -26,6 +26,7 @@
 </head>
 
 <body>
+    <div id="musicPlayerContainer"></div>
     <script>
         NProgress.start();
         window.onload = function () {
@@ -43,39 +44,35 @@
             </li>
             <li>
                 <a href="#about">
-                    <button class="BetterButton" data-menuanchor="about">关于</button>
+                    <button class="BetterButton" data-menuanchor="about">
+                        <i class="fa-solid fa-address-card"></i>
+                        关于
+                    </button>
                 </a>
             </li>
             <li>
                 <a href="#link">
-                    <button class="BetterButton" data-menuanchor="link">一些链接</button>
+                    <button class="BetterButton" data-menuanchor="link">
+                        <i class="fa-solid fa-link"></i>
+                        一些链接
+                    </button>
                 </a>
             </li>
             <li>
                 <a href="#friends">
-                    <button class="BetterButton" data-menuanchor="friends">友链</button>
+                    <button class="BetterButton" data-menuanchor="friends">
+                        <i class="fa-solid fa-people-pulling"></i>
+                        友链
+                    </button>
                 </a>
             </li>
             <li>
                 <a href="#photos">
-                    <button class="BetterButton" data-menuanchor="photos">服务器截图</button>
+                    <button class="BetterButton" data-menuanchor="photos">
+                        <i class="fa-solid fa-photo-film"></i>
+                        服务器截图
+                    </button>
                 </a>
-            </li>
-
-            <li id="togglePageList">
-                <button class="BetterButton">
-                    <i class="fa-solid fa-list"></i></i>其他链接
-                </button>
-            </li>
-            <li id="toggleLanguage">
-                <button class="BetterButton">
-                    <i class="fa-solid fa-language"></i>语言
-                </button>
-            </li>
-            <li mdui-dialog="{target: '#musicPlayerSettings'}">
-                <button class="BetterButton">
-                    <i class="fa-solid fa-music"></i>音乐播放器设置
-                </button>
             </li>
         </menu>
 
@@ -144,8 +141,14 @@
                         </a>
                         <a href="https://maserver.netlify.app/" target="_blank" rel="noopener noreferrer">
                             <div class="section2-element-content-item">
-                                <img src="https://maserver.netlify.app/images/brand.svg" alt="M&A互助公社 服务器">
-                                <p>M&A互助公社 服务器</p>
+                                <img src="https://maserver.netlify.app/images/Union.png" alt="MA-CAT社会主义联盟">
+                                <p>MA-CAT社会主义联盟</p>
+                            </div>
+                        </a>
+                        <a href="https://lzdcraft.sx7.top/" target="_blank" rel="noopener noreferrer">
+                            <div class="section2-element-content-item">
+                                <img src="https://lzdcraft.sx7.top/assets/img/logo1.png" alt="LZD服务器">
+                                <p>LZD服务器</p>
                             </div>
                         </a>
                     </div>

@@ -1,9 +1,9 @@
 /**
  * 切换元素状态
- * @param {string} elementId 元素的ID
+ * @param {string} element 元素
  */
-function toggleElement(elementId) {
-    var element = $('#' + elementId);
+function toggleElement(element) {
+    var element = $(element);
     var isShown = !element.hasClass('show');
 
     if (isShown) {

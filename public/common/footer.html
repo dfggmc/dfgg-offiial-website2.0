@@ -119,65 +119,88 @@
                 fill="#0a7f3a" />
         </g>
     </svg>
-    <a href="http://www.dfggmc.top/"><i class="fa-regular fa-copyright"></i> 2022 - </i>2024<i class="ignore">dfggMC
-            Minecraft</i> 服务器</a>
-    <a href="https://www.rainyun.com/" target="_blank">雨云提供云计算服务</a>
+    <a href="http://www.dfggmc.top/">
+        <i class="fa-solid fa-copyright"></i>
+        2022 - 2024
+        <i class="ignore">dfggMC Minecraft</i> 
+        服务器
+    </a>
+    <a href="https://www.rainyun.com/" target="_blank">
+        <i class="fa-solid fa-cloud-sun-rain"></i>
+        雨云提供云计算服务
+    </a>
     <a href="https://icp.gov.moe/?keyword=20230195" target="_blank" rel="noopener noreferrer">萌ICP备20230195号</a>
     <p>PS : 手机端横屏浏览更佳哦！</p>
 </footer>
-<ul id="PageList" class="fixed-menu">
-    <li>
-        <a href="/page/history.html">
-            <button class="BetterButton">
-                服务器历史
-            </button>
-        </a>
-    </li>
-    <li>
-        <a href="/page/ListSponsors.html">
-            <button class="BetterButton">
-                赞助名单
-            </button>
-        </a>
-    </li>
-</ul>
-<ul id="Language" class="fixed-menu">
-    <li>
-        <a href="javascript:translate.changeLanguage('chinese_simplified');">
-            <button class="BetterButton">
-                简体中文
-            </button>
-        </a>
-    </li>
-    <li>
-        <a href="javascript:translate.changeLanguage('chinese_traditional');">
-            <button class="BetterButton">繁體中文</button>
-        </a>
-    </li>
-    <li>
-        <a href="javascript:translate.changeLanguage('english');">
-            <button class="BetterButton">
-                English
-            </button>
-        </a>
-    </li>
-</ul>
+
+<div id="settings" class="hide">
+    <div id="SettingsContent">
+        <ul id="PageList">
+            <li>
+                <a href="/page/history.html">
+                    <button class="BetterButton">
+                        <i class="fa-solid fa-seedling"></i>
+                        服务器历史
+                    </button>
+                </a>
+            </li>
+            <li>
+                <a href="/page/ListSponsors.html">
+                    <button class="BetterButton">
+                        <i class="fa-solid fa-heart"></i>
+                        赞助名单
+                    </button>
+                </a>
+            </li>
+        </ul>
+        <ul id="Language">
+            <li>
+                <a href="javascript:translate.changeLanguage('chinese_simplified');">
+                    <button class="BetterButton">
+                        简体中文
+                    </button>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:translate.changeLanguage('chinese_traditional');">
+                    <button class="BetterButton">繁體中文</button>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:translate.changeLanguage('english');">
+                    <button class="BetterButton">
+                        English
+                    </button>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li mdui-dialog="{target: '#musicPlayerSettings'}">
+                <button class="BetterButton">
+                    <i class="fa-solid fa-music"></i>
+                    音乐播放器设置
+                </button>
+            </li>
+        </ul>
+    </div>
+</div>
+<button id="OpenSettings" type="button" class="BetterButton" onclick="toggleSettings()">
+    <i class="fa-solid fa-gears"></i>
+    更多功能
+</button>
+
 <script>
     translate.language.setLocal('chinese_simplified'); //设置本地语种（当前网页的语种）
     translate.selectLanguageTag.show = true; //select的选择语言
     translate.execute(); //进行翻译
 
-    // 点击toggle按钮
-    $(document).on('click', '#togglePageList, #toggleLanguage', function () {
-        var elementId = $(this).attr('id').replace('toggle', '');
-        toggleElement(elementId);
-    });
-
-    // 点击列表项
-    $(document).on('click', '#PageList li, #Language li', function () {
-        var elementId = $(this).parent().attr('id');
-        toggleElement(elementId);
-    });
+    function toggleSettings() {
+        var settings = $("#settings");
+        if (settings.hasClass("show")) {
+            settings.removeClass("show").addClass("hide").fadeOut(300);
+        } else {
+            settings.removeClass("hide").addClass("show").fadeIn(300);
+        }
+    }
 </script>
-<div id="musicPlayerContainer"></div>
 <script src="/public/resources/js/MusicPlayer/init.js"></script>

@@ -6,6 +6,7 @@ var musicPlayerContainerInit = `
 <style>
 #musicPlayerSettings {
 	border-radius: 10px;
+    display: none;
 }
 
 #musicPlayerSettings .mdui-switch {
@@ -21,62 +22,60 @@ var musicPlayerContainerInit = `
 }
 </style>
 <div id="musicPlayerSettings" class="mdui-dialog">
-<div class="mdui-dialog-title mdui-color-grey-900"> <i class="mdui-icon material-icons">queue_music</i>
-	音乐播放器设置
-</div>
-<div class="musicPlayerSettingsContent mdui-dialog-content">
-	<ul class="mdui-list">
-		<p id="debug"></p>
-		<li class="mdui-list-item">
-			<i class="mdui-list-item-icon mdui-icon material-icons">music_note</i>
-			<div class="mdui-list-item-title">音乐播放器开关</div>
-			<div class="mdui-list-item-content">
-				<label class="mdui-switch">
-					<input class="music-playlist-switch" name="music-playlist-switch" type="checkbox">
-					<i class="mdui-switch-icon"></i>
-				</label>
-			</div>
-		</li>
-		<li class="mdui-list-item">
-			<i class="mdui-list-item-icon mdui-icon material-icons">play_arrow</i>
-			<div class="mdui-list-item-title">自动播放开关</div>
-			<div class="mdui-list-item-content">
-				<label class="mdui-switch">
-					<input class="music-playlist-autoplay" name="music-playlist-autoplay"
-						type="checkbox">
-					<i class="mdui-switch-icon"></i>
-				</label>
-			</div>
-		</li>
-		<li class="mdui-list-item"> <i
-				class="mdui-list-item-icon mdui-icon material-icons">wb_cloudy</i>
-			<div class="mdui-list-item-title">音乐平台</div>
-			<div class="mdui-list-item-content"> <select class="mdui-select musicServer"
-					name="musicServer">
-					<option value="netease">网易云音乐（默认）</option>
-					<option value="tencent">QQ音乐</option>
-					<option value="kugou">酷狗音乐</option>
-					<option value="xiami">虾米音乐</option>
-					<option value="baidu">百度音乐</option>
-				</select> <i class="mdui-select-icon"></i> </div>
-		</li>
-		<li class="mdui-list-item"> <i class="mdui-list-item-icon mdui-icon material-icons">vpn_key</i>
-			<div class="mdui-list-item-title">音乐歌单ID</div>
-			<div class="mdui-list-item-content music-playlist-id-input"> <input
-					class="mdui-textfield-input musicPlaylistId" name="musicPlaylistId" type="number">
-			</div>
-		</li>
-	</ul>
-</div>
-<div class="mdui-dialog-actions mdui-color-grey-100"> <button
-		class="mdui-btn mdui-ripple mdui-text-color-black-text" mdui-dialog-confirm
-		onclick="musicPlayerSaveSettings()"> <i class="mdui-icon material-icons">done_all</i> 保存配置并生效
-	</button>
-	<button class="mdui-btn mdui-ripple mdui-text-color-black-text" mdui-dialog-cancel
-		onclick="musicPlayerReadConfiguration()"> <i class="mdui-icon material-icons">cancel</i> 取消
-    </button>
-</div>
-</div>
+    <div class="mdui-dialog-title mdui-color-grey-900"> <i class="mdui-icon material-icons">queue_music</i>
+        音乐播放器设置
+    </div>
+    <div class="musicPlayerSettingsContent mdui-dialog-content">
+        <ul class="mdui-list">
+            <p id="debug"></p>
+            <li class="mdui-list-item">
+                <i class="mdui-list-item-icon mdui-icon material-icons">music_note</i>
+                <div class="mdui-list-item-title">音乐播放器开关</div>
+                <div class="mdui-list-item-content">
+                    <label class="mdui-switch">
+                        <input class="music-playlist-switch" name="music-playlist-switch" type="checkbox">
+                        <i class="mdui-switch-icon"></i>
+                    </label>
+                </div>
+            </li>
+            <li class="mdui-list-item">
+                <i class="mdui-list-item-icon mdui-icon material-icons">play_arrow</i>
+                <div class="mdui-list-item-title">自动播放开关</div>
+                <div class="mdui-list-item-content">
+                    <label class="mdui-switch">
+                        <input class="music-playlist-autoplay" name="music-playlist-autoplay" type="checkbox">
+                        <i class="mdui-switch-icon"></i>
+                    </label>
+                </div>
+            </li>
+            <li class="mdui-list-item"> <i class="mdui-list-item-icon mdui-icon material-icons">wb_cloudy</i>
+                <div class="mdui-list-item-title">音乐平台</div>
+                <div class="mdui-list-item-content"> <select class="mdui-select musicServer" name="musicServer">
+                        <option value="netease">网易云音乐（默认）</option>
+                        <option value="tencent">QQ音乐</option>
+                        <option value="kugou">酷狗音乐</option>
+                        <option value="xiami">虾米音乐</option>
+                        <option value="baidu">百度音乐</option>
+                    </select> <i class="mdui-select-icon"></i> </div>
+            </li>
+            <li class="mdui-list-item"> <i class="mdui-list-item-icon mdui-icon material-icons">vpn_key</i>
+                <div class="mdui-list-item-title">音乐歌单ID</div>
+                <div class="mdui-list-item-content music-playlist-id-input"> <input
+                        class="mdui-textfield-input musicPlaylistId" name="musicPlaylistId" type="number">
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="mdui-dialog-actions mdui-color-grey-100">
+        <button class="mdui-btn mdui-ripple mdui-text-color-black-text" mdui-dialog-confirm onclick="musicPlayerSaveSettings()">
+            <i class="mdui-icon material-icons">done_all</i>
+            保存配置并生效
+        </button>
+        <button class="mdui-btn mdui-ripple mdui-text-color-black-text" mdui-dialog-cancel onclick="musicPlayerReadConfiguration()">
+            <i class="mdui-icon material-icons">cancel</i>
+            取消
+        </button>
+    </div>
 </div>
 <div id="meting-js"></div>
 `;

@@ -1,101 +1,36 @@
-/*公用*/
+/* 公用 */
 
 * {
     box-sizing: border-box;
     color: #fff;
     text-shadow: 0 .1875rem .3125rem #1c1f21;
 }
-
 @font-face {
     font-family: 'Minecraft';
     src: url('/public/resources/font/Minecraft.woff2');
 }
-
 @font-face {
     font-family: 'SmileySans';
     src: url('/public/resources/font/SmileySans-Oblique.woff2');
 }
-
 body {
-    font-family: 'Minecraft'!important;
+    font-family: 'Minecraft' !important;
     margin: 0px;
     padding: 0px;
 }
 
-#menu {
+
+/* 设置面板样式 */
+#OpenSettings {
     position: fixed;
-    top: 0;
-    left: 0;
-    height: 40px;
-    z-index: 70;
-    width: 100%;
-    padding: 0;
-    margin: 0;
+    bottom: 2%;
+    right: 2%;
 }
-
-#menu li {
-    display: inline-block;
-    margin: 10px;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-}
-
-#menu i {
-    padding: 3px;
-}
-
-.fixed-menu {
-    position: fixed;
-    top: 40px;
-    left: 0;
-    z-index: 199;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    opacity: 0;
-    display: none;
-    /* 默认隐藏 */
-    transform: translateY(-20px);
-    /* 默认向上偏移一些 */
-    animation-duration: var(--animation-duration, 0.5s);
-    animation-fill-mode: forwards;
-}
-
-.fixed-menu.show {
-    display: block;
-    /* 显示时的样式 */
-    transform: translateY(0);
-    animation-name: slideIn;
-}
-
-.fixed-menu.notShow {
-    /* 移除时的样式 */
-    transform: translateY(0);
-    animation-name: slideOut;
-    display: none;
-}
-
-.fixed-menu li {
-    padding-left: 10px;
-    padding-top: 10px;
-    text-align: center;
-}
-
-.fixed-menu li:first-child {
-    border-top: none;
-}
-
-.fixed-menu li a {
-    display: block;
-    color: #333;
-    text-decoration: none;
-    font-size: 14px;
-}
-
+/* 设置面板移入动画 */
 @keyframes slideIn {
     from {
         opacity: 0;
-        transform: translateX(-100%);
+        transform: translateX(-20px);
     }
 
     to {
@@ -103,7 +38,7 @@ body {
         transform: translateX(0);
     }
 }
-
+/* 设置面板移出动画 */
 @keyframes slideOut {
     from {
         opacity: 1;
@@ -112,10 +47,60 @@ body {
 
     to {
         opacity: 0;
-        transform: translateX(-100%);
+        transform: translateX(-20px);
     }
 }
+#settings {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    animation: slideIn 0.5s ease forwards;
+}
+#settings.show {
+    opacity: 1;
+    visibility: visible;
+}
+#settings.hide {
+    animation: slideOut 0.3s ease forwards;
+}
+#settings ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+#settings li {
+    margin-bottom: 10px;
+}
+/* 语言切换样式 */
+#Language li {
+    display: flex;
+    align-items: center;
+}
+#Language i {
+    margin-right: 5px;
+}
 
+
+/* 顶部导航栏 */
+#menu {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+}
+#menu li {
+    display: inline-block;
+    margin: 10px;
+}
+#menu i {
+    padding: 3px;
+}
 
 
 footer {
@@ -128,35 +113,31 @@ footer {
     left: 0;
     right: 0;
 }
-
 footer a {
-    padding: 10px;
     margin-right: 10px;
     color: white;
     text-decoration: none;
 }
-
 footer .logo {
     width: 9.6rem;
     height: 2.4rem;
 }
 
+
 .aplayer-lrc {
     top: 45px;
 }
-
 .aplayer-lrc-contents p {
     text-shadow: none;
 }
-
 .aplayer-lrc-current {
     text-shadow: none;
 }
 
+
 #nprogress {
     pointer-events: none
 }
-
 #nprogress .bar {
     background: rgb(0, 0, 0);
     position: fixed;
@@ -166,7 +147,6 @@ footer .logo {
     width: 100%;
     height: 2px
 }
-
 #nprogress .peg {
     display: block;
     position: absolute;
@@ -179,7 +159,6 @@ footer .logo {
     -ms-transform: rotate(3deg) translate(0, -4px);
     transform: rotate(3deg) translate(0, -4px)
 }
-
 #nprogress .spinner {
     display: block;
     position: fixed;
@@ -187,7 +166,6 @@ footer .logo {
     top: 15px;
     right: 15px
 }
-
 #nprogress .spinner-icon {
     width: 18px;
     height: 18px;
@@ -199,17 +177,14 @@ footer .logo {
     -webkit-animation: nprogress-spinner 400ms linear infinite;
     animation: nprogress-spinner 400ms linear infinite
 }
-
 .nprogress-custom-parent {
     overflow: hidden;
     position: relative
 }
-
 .nprogress-custom-parent #nprogress .bar,
 .nprogress-custom-parent #nprogress .spinner {
     position: absolute
 }
-
 @-webkit-keyframes nprogress-spinner {
     0% {
         -webkit-transform: rotate(0deg)
@@ -219,7 +194,6 @@ footer .logo {
         -webkit-transform: rotate(360deg)
     }
 }
-
 @keyframes nprogress-spinner {
     0% {
         transform: rotate(0deg)
