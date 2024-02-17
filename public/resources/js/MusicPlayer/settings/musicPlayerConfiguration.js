@@ -133,7 +133,6 @@ function musicPlayerConfiguration(method, key, value) {
         document.cookie = `musicPlayerConfiguration=${JSON.stringify(config)}; expires=${expiresDate.toUTCString()}; domain=${window.location.hostname}`;
     }
     
-
     // 获取当前的配置对象
     const config = getConfig();
 
