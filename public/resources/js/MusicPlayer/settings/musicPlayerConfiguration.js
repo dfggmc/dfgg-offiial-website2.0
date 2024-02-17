@@ -130,9 +130,9 @@ function musicPlayerConfiguration(method, key, value) {
     function saveConfig(config) {
         const expiresDate = new Date();
         expiresDate.setFullYear(expiresDate.getFullYear() + 10);
-        document.cookie = `musicPlayerConfiguration=${JSON.stringify(config)}; expires=${expiresDate.toUTCString()}; domain=${window.location.hostname}`;
+        document.cookie = `musicPlayerConfiguration=${JSON.stringify(config)}; expires=${expiresDate.toUTCString()}; path=/`;
     }
-    
+
     // 获取当前的配置对象
     const config = getConfig();
 
