@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang='zh-CN'>
 
 <head>
     <title>dfgg Minecraft服务器官网</title>
@@ -7,8 +7,8 @@
     <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="/public/resources/css/main.css">
-    <link rel="stylesheet" href="/public/resources/css/index.css">
+    <link rel="stylesheet" href="/public/resources/css/main.css?version=1.0.0">
+    <link rel="stylesheet" href="/public/resources/css/index.css?version=1.0.0">
     <link rel="stylesheet" href="/public/resources/css/server-photo.css">
     <link rel="stylesheet" href="/public/resources/css/BetterButton.css">
     <link href="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/animate.css/4.1.1/animate.min.css" rel="stylesheet">
@@ -26,7 +26,6 @@
 </head>
 
 <body>
-    <div id="musicPlayerContainer"></div>
     <script>
         NProgress.start();
         window.onload = function () {
@@ -80,7 +79,7 @@
             <div class="section" style="text-align: center;">
                 <div class="animate__animated animate__backInDown">
                     <h1>欢迎来到dfgg Minecraft服务器官网！</h1>
-                    <h2>一个使用 <i class="ignore">Cuberite_dfgg</i> 作为服务端的1.12.2创造服务器</h2>
+                    <h2>一个使用 <i class="ignore">Cuberite_dfgg</i> 作为服务端的1.8.x-1.12.x的多玩法服务器</h2>
                 </div>
             </div>
 
@@ -88,7 +87,8 @@
                 <div class="section2-element" style="margin: 80px">
                     <h2>什么？机顶盒也能开服务器？？？！</h2>
                     <p style="font-size: 2em;">没错而且还很稳定!</p>
-                    <img style="max-width: 500px; max-height: 300px;" src="/public/resources/image/wokao.jpg" alt="我靠">
+                    <img style="max-width: 500px; max-height: 300px;" src="/public/resources/image/bujuedehenkuma.jpg"
+                        alt="不觉得很酷吗？">
                     <iframe src="https://state.dfggmc.eu.org/servers" width="40%" height="76px"
                         frameborder="0"></iframe>
                 </div>
@@ -103,10 +103,9 @@
                     gap: 20px;
                     flex-wrap: wrap;
                     ">
-                        <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=qngv2g9NvWoMA6MKs-WCtpfPKt8G2VDH&authKey=f2KlfjKOIaMmaVU%2Bn8QzP%2BuBb1%2BzEGtL7X5gJ66QFH%2F7O6NiH5diRBK7I0IsHA%2Bc&noverify=0&group_code=132939895"
-                            target="_blank">
+                        <a href="https://docs.qq.com/form/page/DVkZITmRlVHF5TVF1" target="_blank">
                             <button class="BetterButton">
-                                加入 QQ 群
+                                服务器白名单申请问卷
                             </button>
                         </a>
                         <a href="https://discord.gg/jWCdnXB5nR" target="_blank">
@@ -133,10 +132,10 @@
                                 <p>peg195的博客</p>
                             </div>
                         </a>
-                        <a href="https://xcccx.top" target="_blank" rel="noopener noreferrer">
+                        <a href="https://mscpo.netlify.app/" target="_blank" rel="noopener noreferrer">
                             <div class="section2-element-content-item">
-                                <img src="https://imag.xcccx.top/uploads/2024/02/02/65bce58322f63.png" alt="xcccx的博客">
-                                <p>xcccx的博客</p>
+                                <img src="https://mscpo.netlify.app/logo2.png" alt="Minecraft服务器集体宣传组织 (MSCPO)">
+                                <p>Minecraft服务器集体宣传组织 (MSCPO)</p>
                             </div>
                         </a>
                         <a href="https://maserver.netlify.app/" target="_blank" rel="noopener noreferrer">
@@ -145,10 +144,16 @@
                                 <p>MA-CAT社会主义联盟</p>
                             </div>
                         </a>
-                        <a href="https://lzdcraft.sx7.top/" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.lzdcraft.top" target="_blank" rel="noopener noreferrer">
                             <div class="section2-element-content-item">
                                 <img src="https://lzdcraft.sx7.top/assets/img/logo1.png" alt="LZD服务器">
                                 <p>LZD服务器</p>
+                            </div>
+                        </a>
+                        <a href="https://api.lolimi.cn/" target="_blank" rel="noopener noreferrer">
+                            <div class="section2-element-content-item">
+                                <img src="https://q1.qlogo.cn/g?b=qq&nk=3498949583&s=640" alt="桑帛云API - 免费、易用的API接口平台">
+                                <p>桑帛云API - 免费、易用的API接口平台</p>
                             </div>
                         </a>
                     </div>
@@ -176,11 +181,20 @@
             loopTop: true,
             loopBottom: true,
             menu: '#menu',
-        });
+            onLeave: function (origin, destination, direction) {
+                if (direction === 'up') {
+                    // 向上滚动，显示内容
+                    $('footer').slideDown()
+                } else if (direction === 'down') {
+                    // 向下滚动，隐藏内容
+                    $('footer').slideUp()
+                }
+            }
+        })
     </script>
     <div id="footer"></div>
     <script>
-        $("#footer").load('/public/common/footer.html');
+        $("#footer").load('/public/common/footer.html?v=0.0.1');
     </script>
 </body>
 

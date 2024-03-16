@@ -1,3 +1,4 @@
+<div id="music-player-container"></div>
 <footer>
     <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1620.26 431.47">
         <g>
@@ -122,7 +123,7 @@
     <a href="http://www.dfggmc.top/">
         <i class="fa-solid fa-copyright"></i>
         2022 - 2024
-        <i class="ignore">dfggMC Minecraft</i> 
+        <i class="ignore">dfggMC Minecraft</i>
         服务器
     </a>
     <a href="https://www.rainyun.com/" target="_blank">
@@ -175,7 +176,7 @@
             </li>
         </ul>
         <ul>
-            <li mdui-dialog="{target: '#musicPlayerSettings'}">
+            <li mdui-dialog="{target: '#music-player-settings'}">
                 <button class="BetterButton">
                     <i class="fa-solid fa-music"></i>
                     音乐播放器设置
@@ -203,4 +204,8 @@
         }
     }
 </script>
-<script src="/public/resources/js/MusicPlayer/init.js"></script>
+<script src="/public/resources/js/MusicPlayer/mian.js?v=0.0.1"></script>
+<script>
+    const musicPlayer = new MusicPlayerSettings();
+    musicPlayer.mian();
+</script>

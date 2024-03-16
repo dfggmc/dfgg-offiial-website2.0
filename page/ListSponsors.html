@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang='zh-CN'>
 
 <head>
     <title>dfgg Minecraft服务器官网</title>
@@ -7,9 +7,7 @@
     <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="/public/resources/css/main.css">
-    <link rel="stylesheet" href="/public/resources/css/index.css">
-    <link rel="stylesheet" href="/public/resources/css/server-photo.css">
+    <link rel="stylesheet" href="/public/resources/css/main.css?version=1.0.0">
     <link rel="stylesheet" href="/public/resources/css/BetterButton.css">
     <link href="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/animate.css/4.1.1/animate.min.css" rel="stylesheet">
     <link href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/fullPage.js/3.1.2/fullpage.min.css" rel="stylesheet">
@@ -90,6 +88,15 @@
             loopTop: true,
             loopBottom: true,
             menu: '#menu',
+            onLeave: function (origin, destination, direction) {
+                if (direction === 'up') {
+                    // 向上滚动，显示内容
+                    $('footer').slideDown()
+                } else if (direction === 'down') {
+                    // 向下滚动，隐藏内容
+                    $('footer').slideUp()
+                }
+            }
         });
     </script>
     <div id="footer"></div>
