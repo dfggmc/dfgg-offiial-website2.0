@@ -15,3 +15,5 @@
 1. [gitee](https://gitee.com/dfggmc/dfgg-offiial-website2.0)
 2. [gitlab](https://gitlab.com/dfggmc/dfgg-offiial-website2.0)
 3. [github(主仓库)](https://github.com/dfggmc/dfgg-offiial-website2.0)
+
+## 此版本不在维护！
